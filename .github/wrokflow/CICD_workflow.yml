@@ -1,0 +1,16 @@
+name: my CI CD frist
+
+on:
+  push:
+  branches:
+  - main
+
+  jobs:
+    build:
+    runs-on: aubuntu-latest
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: say hello
+        run: echo "hello. Github Actions"
